@@ -1,36 +1,205 @@
-*{
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+:root {
+    --main-bg-color: #2874f0;
 }
 
-.felx-all-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+html, body {
+    height: 100%; /* Ensure the body takes the full height */
 }
-footer{
-  height: 12vh;
-  background-color: black;
-  color: white  ;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+header {
+    background: var(--main-bg-color);
+    font-family: 'Lato', sans-serif;
 }
-header{
-  background-color: black;
-  color: white;
+
+nav {
+    display: flex;
 }
-nav ul{
-  height: 10vh;
-  list-style-type: none;
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-nav ul a{
-  padding: 0 23px;
-  color: aliceblue;
-  text-decoration: none;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+.logo img {
+    width: 200px;
+    padding: 0 25px;
 }
-nav ul{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+
+nav ul {
+    height: 58px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 23px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    font-weight: bolder;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    width: 30vw;
+    height: 27px;
+    border-radius: 5px;
+    margin: 0 16px 0 56px;
+    padding: 0 12px;
+}
+
+.search button {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+}
+
+.container {
+    min-height: calc(100vh - 58px - 12vh); /* Adjust to account for header and footer heights */
+    display: flex; /* Use flexbox to position elements */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.slider {
+    width: 80vw;
+    margin: 12px auto;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: 50vh; /* Set the height to 50vh */
+    object-fit: cover; /* Maintains aspect ratio */
+}
+
+.card-slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.card-slider {
+    display: flex; /* Ensure cards are displayed in a row */
+    transition: transform 0.5s ease-in-out;
+}
+
+.cards {
+    display: flex; /* Ensure the card container is a flex container */
+    overflow: hidden; /* Hide overflow for horizontal scrolling */
+}
+
+.card {
+    min-width: 150px; /* Fixed width for cards */
+    height: 150px;
+    margin: 0 10px; /* Adjust margin as needed */
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: var(--main-bg-color); /* Main background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for size */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 1.5em; /* Button text size */
+    transition: background 0.3s; /* Smooth background transition */
+    z-index: 99;
+}
+
+button:hover {
+    background: #1a5bb8; /* Darker shade on hover */
+}
+
+.prev {
+    margin-right: 10px; /* Space between button and slider */
+}
+
+.next {
+    margin-left: 10px; /* Space between button and slider */
+}
+
+footer {
+    margin-top: auto; /* Push footer to the bottom */
+    height: 12vh; /* Height of the footer */
+    background-color: var(--main-bg-color);
+    color: white;
+    font-family: 'Lato', sans-serif;
+    display: flex; /* Center footer content */
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-all-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1000px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .slider {
+        height: 23vh;
+    }
+
+    .logo {
+        justify-content: center;
+        margin: 12px 0;
+    }
+
+    nav ul {
+        justify-content: center;
+        height: 34px;
+    }
+
+    .search {
+        justify-content: center;
+    }
+
+    .search input {
+        margin: 12px 16px;
+    }
+
+    .card {
+        min-width: 100px; /* Smaller width for cards */
+        height: 120px; /* Adjust height */
+    }
+
+    .card-img {
+        border-radius: 5px; /* Adjust for smaller cards */
+    }
 }

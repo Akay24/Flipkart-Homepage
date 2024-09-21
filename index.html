@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>media query</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Page</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="Contact.html">Contact</a </li>
-        </ul>
-    </nav>
-  </header>
-  <main>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, quaerat dolorum. Mollitia, dolores expedita
-    laborum ab nemo quasi natus error at odit. Cumque architecto non vel ipsum alias. Accusantium mollitia cumque
-    aperiam fugit dolor?</main>
-  <footer class="felx-all-center">
-    <p class="flex-all-center">copyright &copy; Abhi</p>
-  </footer>
-</body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="https://www.flipkart.com/">
+                    <img src="./static/logo.svg" alt="Logo" />
+                </a>
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+            <div class="searchbar">
+                <input type="text" placeholder="Search Here" id="searchbar" />
+                <button id="btn">Search</button>
+            </div>
+        </nav>
+    </header>
 
+    <main>
+        <div class="container">
+            <div class="slider">
+                <img src="https://images.unsplash.com/photo-1498429089284-41f8cf3ffd39?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" id="Hero" alt="Hero Image" style="height: 50vh;" />
+            </div>
+        </div>
+
+        <div class="card-slider-container">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="card-slider" id="cardSlider">
+                <div class="cards">
+                    <!-- Infinite Cards -->
+                    <div class="card"><img src="./static/logo.svg" alt="Logo Image" class="card-img" /></div>
+                    <div class="card"><img src="./static/logo.svg" alt="Logo Image" class="card-img" /></div>
+                    <div class="card"><img src="./static/logo.svg" alt="Logo Image" class="card-img" /></div>
+                    <div class="card"><img src="./static/logo.svg" alt="Logo Image" class="card-img" /></div>
+                    <div class="card"><img src="./static/logo.svg" alt="Logo Image" class="card-img" /></div>
+                    <div class="card"><img src="./static/logo.svg" alt="Logo Image" class="card-img" /></div>
+                </div>
+            </div>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </main>
+
+    <footer class="flex-all-center">
+        <p>&copy; 2024 Abhijeet Mishra</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
