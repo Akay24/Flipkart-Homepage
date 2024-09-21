@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.felx-all-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+footer{
+  height: 12vh;
+  background-color: black;
+  color: white  ;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+  background-color: black;
+  color: white;
+}
+nav ul{
+  height: 10vh;
+  list-style-type: none;
+}
+nav ul a{
+  padding: 0 23px;
+  color: aliceblue;
+  text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav ul{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
